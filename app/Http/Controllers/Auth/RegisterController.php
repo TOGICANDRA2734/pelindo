@@ -32,7 +32,7 @@ class RegisterController extends Controller
      */
     protected function redirectTo()
     {
-        if (Auth::user()->role === 'admin') {
+        if (Auth::user()->role === 'admin' || Auth::user()->role == 'mar_sur' || Auth::user()->role = 'mar_ins') {
             return '/';
         } else {
             return '/ship-registration-user/create';

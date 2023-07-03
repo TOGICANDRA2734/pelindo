@@ -153,6 +153,13 @@
                                         placeholder="Input Galangan">
                                 </div>
 
+                                {{-- dokumen kapal --}}
+                                <div class="mb-3 col-12 col-sm-3">
+                                    <label class="form-label">Dokumen Kapal</label>
+                                    <input type="file" class="form-control" name="dokumen_kapal"
+                                        placeholder="Input dokumen kapal">
+                                </div>
+
                             </div>
 
                             <div class="col-12 row">

@@ -160,10 +160,11 @@
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
                     aria-label="Open user menu">
-                    <span class="avatar avatar-sm" style="background-image: url(https://preview.keenthemes.com/metronic-v4/theme/assets/pages/media/profile/profile_user.jpg)"></span>
+                    <span class="avatar avatar-sm"
+                        style="background-image: url(https://preview.keenthemes.com/metronic-v4/theme/assets/pages/media/profile/profile_user.jpg)"></span>
                     <div class="d-none d-xl-block ps-2">
                         <div>{{ Auth::user()->name }}</div>
-                        <div class="mt-1 small text-muted">{{Auth::user()->role}}</div>
+                        <div class="mt-1 small text-muted">{{ Auth::user()->role }}</div>
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -172,7 +173,7 @@
                     <a href="#" class="dropdown-item">Feedback</a>
                     <div class="dropdown-divider"></div>
                     <a href="./settings.html" class="dropdown-item">Settings</a>
-                    <a href="{{ route('logout') }}" class="dropdown-item" 
+                    <a href="{{ route('logout') }}" class="dropdown-item"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Logout
                     </a>
@@ -190,30 +191,31 @@
         <div class="navbar navbar-light">
             <div class="container-xl">
                 <ul class="navbar-nav">
-                    @if (Auth::user()->role === 'admin' || Auth::user()->role ==='activator')
-                    <li class="nav-item {{Route::currentRouteName() == 'dashboard.index' ? "active" : ""}}">
-                        <a class="nav-link" href="{{route('dashboard.index')}}">
-                            <span class="nav-link-icon d-md-none d-lg-inline-block">
-                                <!-- Download SVG icon from http://tabler-icons.io/i/home -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-                                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-                                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-                                </svg>
-                            </span>
-                            <span class="nav-link-title">
-                                Home
-                            </span>
-                        </a>
-                    </li>
+                    @if (Auth::user()->role === 'admin' || Auth::user()->role === 'mar_sur' || (Auth::user()->role = 'mar_ins'))
+                        <li class="nav-item {{ Route::currentRouteName() == 'dashboard.index' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('dashboard.index') }}">
+                                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
+                                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                                        <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                        <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                                    </svg>
+                                </span>
+                                <span class="nav-link-title">
+                                    Home
+                                </span>
+                            </a>
+                        </li>
                     @endif
-                    
-                    @if(Auth::user()->role === 'user')
-                        <li class="nav-item {{Route::currentRouteName() == 'ship-registration-user.create' || Route::currentRouteName() == 'ship-registration-admin.create'  ? "active" : ""}}">
-                            <a class="nav-link" href="{{route('ship-registration-user.create')}}">
+
+                    @if (Auth::user()->role === 'kapal')
+                        <li
+                            class="nav-item {{ Route::currentRouteName() == 'ship-registration-user.create' || Route::currentRouteName() == 'ship-registration-admin.create' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('ship-registration-user.create') }}">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                     <i class="fa-solid fa-ship"></i>
                                 </span>
@@ -223,8 +225,9 @@
                             </a>
                         </li>
 
-                        <li class="nav-item {{Route::currentRouteName() == 'ship-registration-user.index' || Route::currentRouteName() == 'ship-registration-admin.index'  || Route::currentRouteName() == 'ship-registration-user.show' ? "active" : ""}}">
-                            <a class="nav-link" href="./form-elements.html">
+                        <li
+                            class="nav-item {{ Route::currentRouteName() == 'ship-registration-user.index' || Route::currentRouteName() == 'ship-registration-admin.index' || Route::currentRouteName() == 'ship-registration-user.show' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('ship-registration-user.index') }}">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                     <i class="fa-solid fa-ship"></i>
                                 </span>
@@ -235,9 +238,10 @@
                         </li>
                     @endif
 
-                    @if(Auth::user()->role === 'admin' || Auth::user()->role ==='activator')
-                        <li class="nav-item {{Route::currentRouteName() == 'ship-registration-admin.index' || Route::currentRouteName() == 'ship-registration-admin.index'  || Route::currentRouteName() == 'ship-registration-user.show' ? "active"  : ""}}">
-                            <a class="nav-link" href="{{route('ship-registration-admin.index')}}">
+                    @if (Auth::user()->role === 'admin' || Auth::user()->role === 'mar_sur' || (Auth::user()->role = 'mar_ins'))
+                        <li
+                            class="nav-item {{ Route::currentRouteName() == 'ship-registration-admin.index' || Route::currentRouteName() == 'ship-registration-admin.index' || Route::currentRouteName() == 'ship-registration-user.show' ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('ship-registration-admin.index') }}">
                                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                                     <i class="fa-solid fa-ship"></i>
                                 </span>
@@ -292,11 +296,8 @@
                         </div>
                     </li>
                 </ul>
-                
+
             </div>
         </div>
     </div>
 </header>
-
-
-

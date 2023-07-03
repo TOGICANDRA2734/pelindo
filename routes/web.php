@@ -28,7 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
-        if (Auth::user()->role =='user') {
+        if (Auth::user()->role =='kapal') {
             return redirect()->route('ship-registration-user.create');
         } else {
             return redirect()->route('dashboard.index');
@@ -38,9 +38,22 @@ Route::middleware(['auth'])->group(function () {
     // Route dashboard
     Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('dashboard.index');
     
-    // Ship Registration User & Admin
+    // Ship Registration User 
     Route::resource('ship-registration-user', ShipRegistrationUserController::class);
+
+    // Ship Registration Admin
     Route::resource('ship-registration-admin', ShipRegistrationAdminController::class);
+    Route::get('ship-registration-approve/{id}', [ShipRegistrationAdminController::class, 'approveDokumenKapal'])->name('ship-approve');
+    Route::post('ship-registration-galangan/{id}', [ShipRegistrationAdminController::class, 'tambahGalangan'])->name('galangan.add');
+    Route::put('ship-registration-galangan-edit/{id}', [ShipRegistrationAdminController::class, 'editGalangan'])->name('galangan.edit');
+    Route::post('ship-registration-sertifikat-doc/{id}', [ShipRegistrationAdminController::class, 'tambahSertifikatDoc'])->name('sertifikat-doc.add');
+    Route::put('ship-registration-sertifikat-doc-edit/{id}', [ShipRegistrationAdminController::class, 'editSertifikatDoc'])->name('sertifikat-doc.edit');
+    Route::post('ship-registration-proses-end/{id}', [ShipRegistrationAdminController::class, 'tambahEnd'])->name('proses-end.add');
+    Route::put('ship-registration-proses-end-edit/{id}', [ShipRegistrationAdminController::class, 'editEnd'])->name('proses-end.edit');
+    Route::post('ship-registration-laporan/{id}', [ShipRegistrationAdminController::class, 'tambahLaporan'])->name('laporan.add');
+    Route::put('ship-registration-laporan-edit/{id}', [ShipRegistrationAdminController::class, 'editLaporan'])->name('laporan.edit');
+    Route::post('ship-registration-sertifikat/{id}', [ShipRegistrationAdminController::class, 'tambahSertifikat'])->name('sertifikat.add');
+    Route::put('ship-registration-sertifikat-edit/{id}', [ShipRegistrationAdminController::class, 'editSertifikat'])->name('sertifikat.edit');
 
     // Filtering for Ship Documentation
     Route::get('ship-documentation', [ShipRegistrationUserController::class, 'filter'])->name('ship-documentation.filter');
@@ -50,4 +63,6 @@ Route::middleware(['auth'])->group(function () {
         Auth::logout();
         return redirect()->route('login');
     })->name('logout');
+
+    
 });

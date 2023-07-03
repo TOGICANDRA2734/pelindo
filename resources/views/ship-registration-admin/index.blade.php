@@ -41,7 +41,7 @@
 
                                 {{-- Button --}}
                                 <div class="text-center">
-                                    <div class="display mb-3 status-filter-btn" data-filter="all">Show</div>
+                                    <div class="display mb-3 status-filter-btn" data-filter="all" style="cursor: pointer">Show</div>
                                     <div class="d-flex justify-content-center align-items-center gap-2">
                                         <button class="btn btn-outline-success">
                                             <i class="fa-solid fa-file"></i>
@@ -67,7 +67,7 @@
 
                                 {{-- Button --}}
                                 <div class="text-center">
-                                    <div class="display mb-3 status-filter-btn" data-filter="0">Show</div>
+                                    <div class="display mb-3 status-filter-btn" data-filter="0" style="cursor: pointer">Show</div>
                                     <div class="d-flex justify-content-center align-items-center gap-2">
                                         <button class="btn btn-outline-success">
                                             <i class="fa-solid fa-file"></i>
@@ -93,7 +93,7 @@
 
                                 {{-- Button --}}
                                 <div class="text-center">
-                                    <div class="display mb-3 status-filter-btn" data-filter="1">Show</div>
+                                    <div class="display mb-3 status-filter-btn" data-filter="1" style="cursor: pointer">Show</div>
                                     <div class="d-flex justify-content-center align-items-center gap-2">
                                         <button class="btn btn-outline-success">
                                             <i class="fa-solid fa-file"></i>
@@ -118,7 +118,7 @@
 
                                 {{-- Button --}}
                                 <div class="text-center">
-                                    <div class="display mb-3 status-filter-btn" data-filter="2">Show</div>
+                                    <div class="display mb-3 status-filter-btn" data-filter="2" style="cursor: pointer">Show</div>
                                     <div class="d-flex justify-content-center align-items-center gap-2">
                                         <button class="btn btn-outline-success">
                                             <i class="fa-solid fa-file"></i>

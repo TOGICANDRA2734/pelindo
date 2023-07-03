@@ -44,6 +44,7 @@
     {{-- <div class="animate form login_form"> --}}
 
     <section class="login-card">
+        <span style="font-size: 0.725rem; text-align:center;">Digital Marine Operation and Maintenance (DMOM-ITS)</span>
         <h1 class="text-center"> <i class="fa-solid fa-ship mr-3"></i>{{env('APP_NAME')}}</h1>
         <hr>
 
