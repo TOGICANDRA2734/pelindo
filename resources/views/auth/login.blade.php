@@ -99,11 +99,11 @@
                         {{ __('Login') }}
                     </button>
 
-                    {{-- @if (Route::has('password.request'))
-                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
-                        </a>
-                    @endif --}}
+                    
+                    <a class="btn btn-link w-100" href="{{ route('register') }}">
+                        {{ __('Baru? Ajukan Akun') }}
+                    </a>
+                
                 </div>
             </div>
         </form>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use Flasher\Laravel\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -59,8 +60,9 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'username' => ['required', 'string', 'max:255', 'unique:users'],
-            'role' => ['required', 'string', 'max:255'],
+            // 'role' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'pengajuan_stid' => ['required'],
         ]);
     }
 
@@ -72,11 +74,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        // dd($data);
+        $file = request()->file('pengajuan_stid');
+        $file->storeAs('pengajuan_stid', $file->hashName());
+
+        $user =User::create([
             'name' => $data['name'],
             'username' => $data['username'],
-            'role' => $data['role'],
+            'role' => 'kapal',
+            'pengajuan_stid' => $file->hashName(),
             'password' => Hash::make($data['password']),
         ]);
+
+        return $user;
     }
 }

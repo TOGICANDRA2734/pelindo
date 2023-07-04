@@ -464,13 +464,13 @@
             {{-- End: Detail --}}
 
             {{-- Admin Button Accept --}}
-            @if (Auth::user()->role == 'admin' && $data->status_admin == 0)
+            {{-- @if (Auth::user()->role == 'admin' && $data->status_admin == 0) --}}
                 <div class="col-12 py-3">
                     <a href="{{ route('ship-approve', $data->id) }}" class="btn btn-success w-100 uppercase">
                         APPROVED
                     </a>
                 </div>
-            @endif
+            {{-- @endif --}}
 
 
             {{-- End: Button Accept --}}

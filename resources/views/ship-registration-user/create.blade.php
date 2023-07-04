@@ -22,7 +22,7 @@
     <!-- Page body -->
     <div class="page-body">
         <div class="container-xl">
-            <form action="{{ route('ship-registration-user.store') }}" method="POST" class="row row-deck row-cards">
+            <form action="{{ route('ship-registration-user.store') }}" method="POST" class="row row-deck row-cards" enctype="multipart/form-data">
                 @csrf
                 <div class="col-12 mb-3">
                     <div class="card">
