@@ -52,6 +52,8 @@
             integrity="sha512-D/jdE0CypeVxFadTejKGTzmwyV10c1pxZk/AqjJuZbaJwGMyNHY3q/mTPWqMUnFACfCTunhZUVcd4cV78dK1pQ=="
             data-cf-beacon="{&quot;rayId&quot;:&quot;7b435f19fc1d448b&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2023.3.0&quot;,&quot;si&quot;:100}"
             crossorigin="anonymous"></script>      
+
+    @yield('js-optional')
 </body>
 
 </html>

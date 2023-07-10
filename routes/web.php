@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ShipRegistrationAdminController;
 use App\Http\Controllers\ShipRegistrationUserController;
+use App\Http\Controllers\tambahUserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +25,25 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+
+
+Route::get('/register-user/step1', [tambahUserController::class, 'step1'])->name('tambahUser.step1');
+Route::post('/register-user/step1', [tambahUserController::class, 'postStep1'])->name('tambahUser.postStep1');
+
+Route::get('/register-user/step2', [tambahUserController::class, 'step2'])->name('tambahUser.step2');
+Route::post('/register-user/step2', [tambahUserController::class, 'postStep2'])->name('tambahUser.postStep2');
+
+Route::get('/register-user/step3', [tambahUserController::class, 'step3'])->name('tambahUser.step3');
+Route::post('/register-user/step3', [tambahUserController::class, 'postStep3'])->name('tambahUser.postStep3');
+
+
+Route::get('/register-user/complete', [tambahUserController::class, 'complete'])->name('tambahUser.complete');
+
+Route::get('/provinces', [LocationController::class,'getProvinces'])->name('provinces');
+Route::get('/cities/{provinceId}', [LocationController::class,'getCities'])->name('cities');
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

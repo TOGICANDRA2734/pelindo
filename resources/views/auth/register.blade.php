@@ -1,7 +1,141 @@
 @extends('layouts.app')
 
+@section('css-optional')
+    <link rel="stylesheet" href="{{asset('dist/css/tabler.min.css')}}">
+@endsection
+
 @section('content')
-    <div class="container container-tight py-4">
+    <div class="container-tight py-4">
+        <div class="card card-md">
+            <div class="card-body text-center py-2 p-sm-4">
+                <i class="fa-solid fa-ship mb-n2" style="font-size: 50px;"></i> 
+                <h1 class="mt-1">Selamat Datang di Galangan!</h1>
+            </div>
+            <div class="hr-text hr-text-center hr-text-spaceless">Data anda</div>
+            <div class="card-body">
+                <div class="mb-2">
+                    <label class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" autocomplete="off" name="name">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">NIP/NIPY</label>
+                    <input type="text" class="form-control" autocomplete="off" name="nip">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Tempat Lahir - Provinsi</label>
+                    <select class="form-control" name="provinsi" id="provinsi">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Tempat Lahir - Kab/Kota</label>
+                    <select class="form-control" name="kota" id="kota">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Tanggal Lahir</label>
+                    <select class="form-control" name="tgl_lahir" id="tgl_lahir">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Jenis Kelamin</label>
+                    <select class="form-control" name="jenis_kelamin" id="jenis_kelamin">
+                        <option value="" selected disabled>Pilih</option>
+                        <option value="pria">Pria</option>
+                        <option value="wanita">Wanita</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Status Perkawinan</label>
+                    <select class="form-control" name="status_perkawinan" id="status_perkawinan">
+                        <option value="" selected disabled>Pilih</option>
+                        <option value="kawin">Kawin</option>
+                        <option value="belum kawin">Belum Kawin</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Agama</label>
+                    <select class="form-control" name="agama" id="agama">
+                        <option value="" selected disabled>Pilih</option>
+                        <option value="islam">Islam</option>
+                        <option value="kristen">Kristen</option>
+                        <option value="katholik">Katholik</option>
+                        <option value="hindu">Hindu</option>
+                        <option value="buddha">Buddha</option>
+                        <option value="khonghuchu">Khonghuchu</option>
+                        <option value="lainnya">lainnya</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Gol. Darah</label>
+                    <select name="gol_darah" id="gol_darah">
+                        <option value="" selected disabled>Pilih</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Alamat Surat-Menyurat</label>
+                    <input type="text" name="alamat_surat" id="alamat_surat" class="form-control">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Alamat Surat - Provinsi</label>
+                    <select name="provinsi_surat" id="provinsi_surat">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Alamat Surat - Kab/Kota</label>
+                    <select name="kota_surat" id="kota_surat">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Kode Pos</label>
+                    <input type="text" name="kode_pos" id="kode_pos" class="form-control">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Telepon</label>
+                    <input type="text" name="telepon" id="telepon" class="form-control">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Handphone</label>
+                    <input type="text" name="hp" id="hp" class="form-control">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Foto</label>
+                    <input type="file" name="foto" id="foto" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center mt-3">
+            <div class="col-4">
+                <div class="progress">
+                    <div class="progress-bar" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100">
+                        <span class="visually-hidden">25% Complete</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-list justify-content-end">
+                    
+                    <a href="#" class="btn btn-primary">
+                        Continue
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- <div class="container container-tight py-4">
         <div class="text-center mb-4">
             <a href="." class="navbar-brand navbar-brand-autodark"><img src="./static/logo.svg" height="36"
                     alt=""></a>
@@ -12,7 +146,7 @@
                 <h2 class="card-title text-center mb-4">Ajukan Akun </h2>
                 <div class="mb-3">
                     <label class="form-label">Nama</label>
-                    <input type="text" class="form-control" placeholder="Masukkan name" name="name">
+                    <input type="text" class="form-control" placeholder="Masukkan nama" name="name">
                     @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -100,5 +234,5 @@
         <div class="text-center text-muted mt-3">
             Sudah punya akun? <a href="{{ route('login') }}" tabindex="-1">Masuk</a>
         </div>
-    </div>
+    </div> --}}
 @endsection
