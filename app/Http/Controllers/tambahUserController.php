@@ -46,6 +46,7 @@ class tambahUserController extends Controller
     }
     public function postStep2(Request $request)
     {
+
         $client = new Client();
 
         try {
@@ -70,7 +71,7 @@ class tambahUserController extends Controller
         $requestData['foto'] = $fileHashName;
         $requestData = array_merge($requestData, $step1Data);
 
-        $request->session()->put('step2_data', $requestData);
+        session(['step2_data' =>  $requestData]);
 
         return redirect()->route('tambahUser.step3');
     }
@@ -81,6 +82,8 @@ class tambahUserController extends Controller
     }
     public function postStep3(Request $request)
     {
+        
+
         $step2Data = session('step2_data');
         session()->forget('step2_data');
 
@@ -104,29 +107,29 @@ class tambahUserController extends Controller
             'password' => $step2Data['password'],
             'email' => $step2Data['email'],
             'role' => 'kapal',
-            'status_perkawinan' => $step2Data->status_perkawinan,
-            'agama' => $step2Data->agama,
-            'gol_darah' => $step2Data->gol_darah,
-            'alamat_surat' => $step2Data->alamat_surat,
-            'provinsi_surat' => $step2Data->provinsi_surat,
-            'kota_surat' => $step2Data->kota_surat,
-            'kode_pos' => $step2Data->kode_pos,
-            'telepon' => $step2Data->telepon,
-            'hp' => $step2Data->hp,
-            'tgl_lahir' => $step2Data->tgl_lahir,
-            'jenis_kelamin' => $step2Data->jenis_kelamin,
+            'status_perkawinan' => $step2Data['status_perkawinan'],
+            'agama' => $step2Data['agama'],
+            'gol_darah' => $step2Data['gol_darah'],
+            'alamat_surat' => $step2Data['alamat_surat'],
+            'provinsi_surat' => $step2Data['provinsi_surat'],
+            'kota_surat' => $step2Data['kota_surat'],
+            'kode_pos' => $step2Data['kode_pos'],
+            'telepon' => $step2Data['telepon'],
+            'hp' => $step2Data['hp'],
+            'tgl_lahir' => $step2Data['tgl_lahir'],
+            'jenis_kelamin' => $step2Data['jenis_kelamin'],
         ]);
 
-        // Save the user
+        // Save the user1
         $user->save();
 
         // Attach file paths to the user model
-        $user->filePaths()->createMany($filePaths);
+        // $user->filePaths()->createMany($filePaths);
 
         // Log in the user
         Auth::login($user);
 
-        return redirect()->route('/');
+        return redirect()->route('ship-registration-user.create');
     }
 
     public function complete()

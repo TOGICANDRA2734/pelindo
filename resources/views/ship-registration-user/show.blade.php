@@ -180,7 +180,7 @@
                                 {{-- <a href="{{ route('pdf.view', ['filename' => '$data->dokumen_kapal']) }}" target="_blank">Open PDF</a> --}}
                                 <a href="#"
                                     onclick="window.open('{{ asset('storage/dokumen_kapal/' . $data->dokumen_kapal) }}', '_blank');"
-                                    class="btn btn-facebook w-100 btn-icon" aria-label="pdf">
+                                    class="btn btn-blue w-100 btn-icon" aria-label="pdf">
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                         class="icon icon-tabler icon-tabler-file-description" width="24"
                                         height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -244,7 +244,7 @@
                                     {{-- <a href="{{ route('pdf.view', ['filename' => '$data->dokumen_kapal']) }}" target="_blank">Open PDF</a> --}}
                                     <a href="#"
                                         onclick="window.open('{{ asset('storage/proses_galangan/' . $data->proses_galangan) }}', '_blank');"
-                                        class="btn btn-twitter w-100 btn-icon" aria-label="pdf">
+                                        class="btn btn-purple w-100 btn-icon" aria-label="pdf">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-file-description" width="24"
                                             height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -366,7 +366,7 @@
                                     {{-- <a href="{{ route('pdf.view', ['filename' => '$data->dokumen_kapal']) }}" target="_blank">Open PDF</a> --}}
                                     <a href="#"
                                         onclick="window.open('{{ asset('storage/proses_end/' . $data->proses_end) }}', '_blank');"
-                                        class="btn btn-google w-100 btn-icon" aria-label="pdf">
+                                        class="btn btn-warning w-100 btn-icon" aria-label="pdf">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-file-description" width="24"
                                             height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -403,7 +403,7 @@
                                     {{-- <a href="{{ route('pdf.view', ['filename' => '$data->dokumen_kapal']) }}" target="_blank">Open PDF</a> --}}
                                     <a href="#"
                                         onclick="window.open('{{ asset('storage/laporan/' . $data->laporan) }}', '_blank');"
-                                        class="btn btn-google w-100 btn-icon" aria-label="pdf">
+                                        class="btn btn-rss w-100 btn-icon" aria-label="pdf">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-file-description" width="24"
                                             height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
@@ -439,7 +439,7 @@
                                     {{-- <a href="{{ route('pdf.view', ['filename' => '$data->dokumen_kapal']) }}" target="_blank">Open PDF</a> --}}
                                     <a href="#"
                                         onclick="window.open('{{ asset('storage/sertifikat_ins/' . $data->sertifikat_ins) }}', '_blank');"
-                                        class="btn btn-google w-100 btn-icon" aria-label="pdf">
+                                        class="btn btn-success w-100 btn-icon" aria-label="pdf">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             class="icon icon-tabler icon-tabler-file-description" width="24"
                                             height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"

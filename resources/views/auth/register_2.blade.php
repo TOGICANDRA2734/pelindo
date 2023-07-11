@@ -16,7 +16,7 @@
             <div class="card-body">
                 <div class="mb-2">
                     <label class="form-label">Status Perkawinan</label>
-                    <select class="form-control" name="status_perkawinan" id="status_perkawinan">
+                    <select class="form-control" required name="status_perkawinan" id="status_perkawinan">
                         <option value="" selected disabled>Pilih</option>
                         <option value="kawin">Kawin</option>
                         <option value="belum kawin">Belum Kawin</option>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Agama</label>
-                    <select class="form-control" name="agama" id="agama">
+                    <select class="form-control" required name="agama" id="agama">
                         <option value="" selected disabled>Pilih</option>
                         <option value="islam">Islam</option>
                         <option value="kristen">Kristen</option>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Gol. Darah</label>
-                    <select name="gol_darah" id="gol_darah" class="form-control">
+                    <select required name="gol_darah" id="gol_darah" class="form-control">
                         <option value="" selected disabled>Pilih</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
@@ -47,37 +47,37 @@
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Alamat Surat-Menyurat</label>
-                    <input type="text" name="alamat_surat" id="alamat_surat" class="form-control">
+                    <input type="text" required name="alamat_surat" id="alamat_surat" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Alamat Surat - Provinsi</label>
-                    <select name="provinsi_surat" id="provinsi_surat" class="form-control">
+                    <select required name="provinsi_surat" id="provinsi_surat" class="form-control">
                     </select>
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Alamat Surat - Kab/Kota</label>
-                    <select name="kota_surat" id="kota_surat" class="form-control">
+                    <select required name="kota_surat" id="kota_surat" class="form-control">
                     </select>
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Kode Pos</label>
-                    <input type="text" name="kode_pos" id="kode_pos" class="form-control">
+                    <input type="text" required name="kode_pos" id="kode_pos" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Telepon</label>
-                    <input type="text" name="telepon" id="telepon" class="form-control">
+                    <input type="text" required name="telepon" id="telepon" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Handphone</label>
-                    <input type="text" name="hp" id="hp" class="form-control">
+                    <input type="text" required name="hp" id="hp" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Email</label>
-                    <input type="email" name="email" id="email" class="form-control">
+                    <input type="email" required name="email" id="email" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Foto</label>
-                    <input type="file" name="foto" id="foto" class="form-control">
+                    <input type="file" required name="foto" id="foto" class="form-control">
                 </div>
             </div>
         </div>

@@ -16,39 +16,39 @@
             <div class="card-body">
                 <div class="mb-2">
                     <label class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" autocomplete="off" name="name">
+                    <input type="text" class="form-control" autocomplete="off" required name="name">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Username</label>
-                    <input type="text" class="form-control" autocomplete="off" name="username">
+                    <input type="text" class="form-control" autocomplete="off" required name="username">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control" autocomplete="off" name="password">
+                    <input type="password" class="form-control" autocomplete="off" required name="password">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">NIP/NIPY</label>
-                    <input type="text" class="form-control" autocomplete="off" name="nip">
+                    <input type="text" class="form-control" autocomplete="off" required name="nip">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Tempat Lahir - Provinsi</label>
-                    <select class="form-control" name="provinsi" id="provinsi">
+                    <select class="form-control" required name="provinsi" id="provinsi">
                         
                     </select>
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Tempat Lahir - Kab/Kota</label>
-                    <select class="form-control" name="kota" id="kota">
+                    <select class="form-control" required name="kota" id="kota">
                         <option value="1">1</option>
                     </select>
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Tanggal Lahir</label>
-                    <input type="date" class="form-control" name="tgl_lahir" id="tgl_lahir">
+                    <input type="date" class="form-control" required name="tgl_lahir" id="tgl_lahir">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Jenis Kelamin</label>
-                    <select class="form-control" name="jenis_kelamin" id="jenis_kelamin">
+                    <select class="form-control" required name="jenis_kelamin" id="jenis_kelamin">
                         <option value="" selected disabled>Pilih</option>
                         <option value="pria">Pria</option>
                         <option value="wanita">Wanita</option>

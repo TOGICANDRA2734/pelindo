@@ -37,7 +37,6 @@ Route::post('/register-user/step2', [tambahUserController::class, 'postStep2'])-
 Route::get('/register-user/step3', [tambahUserController::class, 'step3'])->name('tambahUser.step3');
 Route::post('/register-user/step3', [tambahUserController::class, 'postStep3'])->name('tambahUser.postStep3');
 
-
 Route::get('/register-user/complete', [tambahUserController::class, 'complete'])->name('tambahUser.complete');
 
 Route::get('/provinces', [LocationController::class,'getProvinces'])->name('provinces');

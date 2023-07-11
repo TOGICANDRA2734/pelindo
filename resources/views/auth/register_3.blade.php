@@ -16,39 +16,39 @@
             <div class="card-body">
                 <div class="mb-2">
                     <label class="form-label">Dok. Servewell Stable</label>
-                    <input type="file" name="dok_1" id="dok_1" class="form-control">
+                    <input type="file" required name="dok_1" id="dok_1" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Dok. Konstruksi Servewell Stable</label>
-                    <input type="file" name="dok_2" id="dok_2" class="form-control">
+                    <input type="file" required name="dok_2" id="dok_2" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Dok. Sertifikat Perlengkapan Stable</label>
-                    <input type="file" name="dok_3" id="dok_3" class="form-control">
+                    <input type="file" required name="dok_3" id="dok_3" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Dok. Radio Serverwell Stable</label>
-                    <input type="file" name="dok_4" id="dok_4" class="form-control">
+                    <input type="file" required name="dok_4" id="dok_4" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Dok. SNPP Serverwell Stable</label>
-                    <input type="file" name="dok_5" id="dok_5" class="form-control">
+                    <input type="file" required name="dok_5" id="dok_5" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Dok. Surat Ukur Serverwell Stable</label>
-                    <input type="file" name="dok_6" id="dok_6" class="form-control">
+                    <input type="file" required name="dok_6" id="dok_6" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Dok. Class BKI (Lambung) Serverwell Stable</label>
-                    <input type="file" name="dok_7" id="dok_7" class="form-control">
+                    <input type="file" required name="dok_7" id="dok_7" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Dok. Class BKI (Mesin) Serverwell Stable</label>
-                    <input type="file" name="dok_8" id="dok_8" class="form-control">
+                    <input type="file" required name="dok_8" id="dok_8" class="form-control">
                 </div>
                 <div class="mb-2">
                     <label class="form-label">Dok. Class BKI (Load Line) Serverwell Stable</label>
-                    <input type="file" name="dok_9" id="dok_9" class="form-control">
+                    <input type="file" required name="dok_9" id="dok_9" class="form-control">
                 </div>
             </div>
         </div>
